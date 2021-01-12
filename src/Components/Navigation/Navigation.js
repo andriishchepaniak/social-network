@@ -1,12 +1,13 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
+import './Navigation.css'
 
 const Navigation = () => {
 
     return (
-        <ul className="nav flex-column">
+        <ul className="nav flex-column navigation">
             <li className="nav-item">
-                <NavLink className="nav-link active" to="/">News</NavLink>
+                <NavLink className="nav-link active" to="/news">News</NavLink>
             </li>
             <li className="nav-item">
                 <NavLink className="nav-link" to="/profile">Profile</NavLink>
@@ -15,7 +16,7 @@ const Navigation = () => {
                 <NavLink className="nav-link" to="/friends">Friends</NavLink>
             </li>
             <li className="nav-item">
-                <NavLink className="nav-link" to="/messages">Messages</NavLink>
+                <NavLink className="nav-link" to="/dialogs">Dialogs</NavLink>
             </li>
         </ul>
     )

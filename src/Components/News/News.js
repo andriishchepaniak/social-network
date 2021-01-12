@@ -3,7 +3,7 @@ import Post from '../News/Post.js'
 
 const News = (props) => {
     var news = []
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 5; i++) {
         news[i] = {
             id: i + 1,
             author: "Author ",
@@ -31,7 +31,8 @@ const News = (props) => {
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
-            {newsjsx} </div>
+            { newsjsx } 
+        </div>
 
     )
 }
