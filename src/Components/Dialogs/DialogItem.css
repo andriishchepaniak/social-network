@@ -1,3 +1,6 @@
 .item img{
     width: 45px;
 }
+.link:hover{
+    text-decoration: none;
+}

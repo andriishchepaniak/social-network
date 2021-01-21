@@ -3,11 +3,12 @@ import Navbar from './Components/Navbar.js'
 import Navigation from './Components/Navigation/Navigation.js'
 import News from './Components/News/News.js'
 import Dialogs from './Components/Dialogs/Dialogs.js'
-import {BrowserRouter, NavLink, Route, Switch} from 'react-router-dom'
+import {BrowserRouter, Route} from 'react-router-dom'
 import Profile from './Components/Profile/Profile.js'
 
 
-function App() {
+const App = (props) => {
+  
   return (
     <BrowserRouter>
       <Navbar />
@@ -15,11 +16,12 @@ function App() {
         <div className="row">
           <div className="col-md-3">
             <Navigation/>
+            
           </div>
           <div className="col-md-7">
-            <Route path="/news" component={News} />
-            <Route path="/profile" component={Profile} />
-            <Route path="/dialogs" component={Dialogs} />
+            <Route path="/news" render={() => <News posts={props.state.newsPage.newsData}/>} />
+            <Route path="/profile" render={() => <Profile changeTextArea={props.changeTextArea} addPost={props.addPost} state={props.state.profilePage}/>} />
+            <Route path="/dialogs" render={() => <Dialogs usersDialogs={props.state.dialogsPage.usersDialogs} messages={props.state.dialogsPage.messages}/>} />
           </div>
           <div className="col-md-2">
             
