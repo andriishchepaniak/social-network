@@ -1,3 +1,11 @@
 .navigation{
     background-color: aliceblue;
 }
+
+.nav-link:hover{
+    color: gold;
+}
+
+.active {
+    color: darkblue;
+}

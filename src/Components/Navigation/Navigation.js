@@ -7,7 +7,7 @@ const Navigation = () => {
     return (
         <ul className="nav flex-column navigation">
             <li className="nav-item">
-                <NavLink className="nav-link active" to="/news">News</NavLink>
+                <NavLink className="nav-link" to="/news">News</NavLink>
             </li>
             <li className="nav-item">
                 <NavLink className="nav-link" to="/profile">Profile</NavLink>

@@ -20,8 +20,8 @@ const App = (props) => {
           </div>
           <div className="col-md-7">
             <Route path="/news" render={() => <News posts={props.state.newsPage.newsData}/>} />
-            <Route path="/profile" render={() => <Profile changeTextArea={props.changeTextArea} addPost={props.addPost} state={props.state.profilePage}/>} />
-            <Route path="/dialogs" render={() => <Dialogs usersDialogs={props.state.dialogsPage.usersDialogs} messages={props.state.dialogsPage.messages}/>} />
+            <Route path="/profile" render={() => <Profile dispatch={props.dispatch} state={props.state.profilePage}/>} />
+            <Route path="/dialogs" render={() => <Dialogs state={props.state.dialogsPage} dispatch={props.dispatch}/>} />
           </div>
           <div className="col-md-2">
             
