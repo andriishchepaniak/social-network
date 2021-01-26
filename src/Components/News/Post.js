@@ -26,10 +26,10 @@ const Post = (props) => {
                         }</small>
                     </p>
                 </div>
-                
-                
+
+
             </div>
-            
+
         </div>
     )
 }

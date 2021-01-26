@@ -1,5 +1,4 @@
-const newsActionTypes = {
-}
+const newsActionTypes = {};
 
 let initialState = {
     newsData: [
@@ -25,7 +24,7 @@ let initialState = {
             date: "date 4"
         }
     ]
-}
+};
 
 const newsReducer = (state = initialState, action) => {
     switch (action.type) {

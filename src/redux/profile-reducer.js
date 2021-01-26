@@ -42,13 +42,16 @@ const profileReducer = (state = initialState, action) => {
                 text: state.textarea,
                 date: today
             };
-
-            state.newsData.push(newPost);
-            state.textarea = '';
-            return state;
+            return {
+                ...state,
+                newsData: [newPost, ...state.newsData],
+                textarea: ''
+            }
         case profileActionTypes.UPDATE_NEW_POST_TEXT:
-            state.textarea = action.newText;
-            return state;
+            return {
+                ...state,
+                textarea: action.newText
+            }
         default:
             return state;
     }

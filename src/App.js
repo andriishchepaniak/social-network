@@ -5,6 +5,8 @@ import DialogsContainer from './Components/Dialogs/DialogsContainer.js'
 import {BrowserRouter, Route} from 'react-router-dom'
 import Profile from './Components/Profile/Profile.js'
 import NewsContainer from './Components/News/NewsContainer.js'
+import UsersContainer from './Components/Users/UsersContainer.js'
+import FriendsContainer from './Components/Friends/FriendsContainer.js'
 
 
 
@@ -20,9 +22,11 @@ const App = (props) => {
             
           </div>
           <div className="col-md-7">
-            <Route path="/news" render={() => <NewsContainer state={props.state.newsPage}/>} />
-            <Route path="/profile" render={() => <Profile state={props.state.profilePage} dispatch={props.dispatch}/>} />
-            <Route path="/dialogs" render={() => <DialogsContainer state={props.state.dialogsPage} dispatch={props.dispatch}/>} />
+            <Route path="/news" render={() => <NewsContainer />} />
+            <Route path="/profile" render={() => <Profile />} />
+            <Route path="/friends" render={() => <FriendsContainer />} />
+            <Route path="/dialogs" render={() => <DialogsContainer />} />
+            <Route path="/users" render={() => <UsersContainer />} />
           </div>
           <div className="col-md-2">
             

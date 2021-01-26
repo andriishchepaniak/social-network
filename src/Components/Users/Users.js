@@ -1,7 +1,7 @@
 import React from "react"
-import User from '../Users/User.js'
+import User from './User.js'
 
-const Friends = (props) => {
+const Users = (props) => {
     let users = props.users.map(user => (
         <User id = {user.id}
               avatarUrl={user.avatarUrl}
@@ -19,4 +19,4 @@ const Friends = (props) => {
     )
 }
 
-export default Friends;
+export default Users;
